@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+    Text,
+    View,
+    TextInput,
+    Button,
+    TouchableHighlight,
+    TouchableOpacity
+} from "react-native";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    return (
+        <View className="border h-[100px] mt-8 w-full ">
+            <Text className="text-blue-600">Hi there,</Text>
+            <TextInput className="border border-red-400 "></TextInput>
+            <Button
+                // onPress={onPressLearnMore}
+                title="click me"
+                color="#841584"
+                accessibilityLabel="Learn more about this purple button"
+            />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+            <TouchableHighlight>
+                <View>
+                    <Text>Touch Here</Text>
+                </View>
+            </TouchableHighlight>
+
+
+            <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text>Press Here</Text>
+      </TouchableOpacity>
+        </View>
+    );
+}
